@@ -50,14 +50,14 @@ Counter.prototype = {
     $('.block-container .block').removeClass('active');
     if(this.current > 0){
       var div3 = this.current % 3 == 0;
-      var div8 = this.current % 8 == 0;
-      if(div3 && !div8) {
+      var div5 = this.current % 5 == 0;
+      if(div3 && !div5) {
         $('#fingers').addClass('active');
       }
-      if(!div3 && div8) {
+      if(!div3 && div5) {
         $('#toes').addClass('active');
       }
-      if(div8 && div3) {
+      if(div5 && div3) {
         $('.block-container .block').addClass('active');
       }
     }
