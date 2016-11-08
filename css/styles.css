@@ -67,6 +67,9 @@ body {
       text-align: center;
       vertical-align: middle;
       display: table-cell; }
+    .block-container .block.active {
+      background-color: #f1c40f;
+      color: #34495e; }
     .block-container .block:last-child {
       border-top: 2px; }
 

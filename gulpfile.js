@@ -8,7 +8,7 @@ let autoprefixer  = require('gulp-autoprefixer');
 let concat        = require('gulp-concat');
 let uglify        = require('gulp-uglify');
 
-gulp.task('serve', ['watch'], () => {
+gulp.task('serve', ['watch', 'sass', 'js'], () => {
   browserSync.init({
      server: {
          baseDir: './'
@@ -32,10 +32,10 @@ gulp.task('sass', () => {
 
 gulp.task('js', () => {
   return gulp.src('./js/files/*.js')
-    .pipe(uglify())
     .pipe(concat('scripts.min.js'))
+    .pipe(uglify())
     .pipe(gulp.dest('./js'))
-    .pipe(browserSync.reload());
+    // .pipe(browserSync.reload());
 });
 
 gulp.task('default', ['serve']);

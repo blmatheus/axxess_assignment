@@ -84,6 +84,10 @@ body {
       vertical-align: middle;
       display: table-cell;
     }
+    &.active {
+      background-color: #f1c40f;
+      color: #34495e;
+    }
     &:last-child {
       border-top: 2px;
     }
