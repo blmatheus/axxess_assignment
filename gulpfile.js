@@ -35,7 +35,7 @@ gulp.task('js', () => {
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js'))
-    // .pipe(browserSync.reload());
+    .pipe(browserSync.reload());
 });
 
 gulp.task('default', ['serve']);
