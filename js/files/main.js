@@ -12,7 +12,14 @@ Counter.prototype = {
     // Using e.preventDefault with click action to prevent form action
     $('#submit').click(function(e){
       e.preventDefault();
-      self.start();
+      if(self.count > 0) return;
+      var numberValue = $('input[type=number]').val();
+      if($.isNumeric(numberValue)) {
+        self.start();
+      } else {
+        self._reset();
+        alert('Please enter a numerical value');
+      }
     });
     $('#reset').click(function(e){
       e.preventDefault();
@@ -30,10 +37,14 @@ Counter.prototype = {
   },
   _detectTotalChange: function() {
     var self = this;
-    $('input[type=number]').on('change paste keyup', function(){
-      self.total = $(this).val();
-      self._setValues();
-    });
+    if(self.count == 0) {
+      $('input[type=number]').on('change paste keyup', function(){
+        var value = $(this).val();
+        if(!$.isNumeric(value)) return;
+        self.total = value;
+        self._setValues();
+      });
+    }
   },
   _moduloCheck: function() {
     $('.block-container .block').removeClass('active');
