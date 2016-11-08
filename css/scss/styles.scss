@@ -41,11 +41,15 @@ body {
         background-color: #e67e22;
       }
     }
-    &:after {
-      content: '';
-      clear: both;
-      display: table;
-    }
+  }
+}
+
+.menu,
+.block-container {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
   }
 }
 
@@ -86,7 +90,6 @@ body {
     }
     &.active {
       background-color: #f1c40f;
-      color: #34495e;
     }
     &:last-child {
       border-top: 2px;
@@ -131,7 +134,10 @@ body {
   .block-container {
     height: 87.5vh;
     .block {
-      height: 50%;
+      height: 100%;
+      width: 50vw;
+      float: left;
+      border-width: 1px;
     }
   }
 }

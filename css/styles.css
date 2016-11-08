@@ -33,10 +33,12 @@ body {
       background-color: #e74c3c; }
       .menu .form-container button:last-child {
         background-color: #e67e22; }
-    .menu .form-container:after {
-      content: '';
-      clear: both;
-      display: table; }
+
+.menu:after,
+.block-container:after {
+  content: '';
+  clear: both;
+  display: table; }
 
 .block-container {
   height: 75vh; }
@@ -68,8 +70,7 @@ body {
       vertical-align: middle;
       display: table-cell; }
     .block-container .block.active {
-      background-color: #f1c40f;
-      color: #34495e; }
+      background-color: #f1c40f; }
     .block-container .block:last-child {
       border-top: 2px; }
 
@@ -99,4 +100,7 @@ body {
   .block-container {
     height: 87.5vh; }
     .block-container .block {
-      height: 50%; } }
+      height: 100%;
+      width: 50vw;
+      float: left;
+      border-width: 1px; } }
