@@ -2,27 +2,30 @@
 <html>
   <head>
     <title>Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel=stylesheet href="css/styles.css"/>
   </head>
   <body>
     <div class="menu">
       <div class="form-container">
         <form>
-          <input name="number" type="number" />
+          <input name="number" placeholder="Enter number" type="number" />
           <input id="submit" type="submit" />
         </form>
-      </div>
-      <div class="counter">
-        <div id="current" class="current"></div>
-        <div id="total" class="total"></div>
+        <button>Reset</button>
+        <button>Restart</button>
       </div>
     </div>
     <div class="block-container">
+      <div class="counter">
+        <div id="current" class="current">0</div>
+        <div id="total" class="total">0</div>
+      </div>
       <div id="fingers" class="block">
-        <div class="block-text"></div>
+        <div class="block-text">fingers</div>
       </div>
       <div id="toes" class="block">
-        <div class="block-text"></div>
+        <div class="block-text">toes</div>
       </div>
     </div>
     <script src="js/scripts.min.js"></script>
